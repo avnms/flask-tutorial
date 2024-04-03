@@ -63,7 +63,7 @@ def create():
     return render_template("blog/create.html")
 
 
-@bp.route("/update", methods=["GET", "POST"])
+@bp.route("/<int:id>/update", methods=["GET", "POST"])
 @login_required
 def update(id):
     post = get_post(id)
